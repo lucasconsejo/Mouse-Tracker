@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+   tools:context="com.example.lucas.testmouse.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/saisie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:background="#FFFFFFFF"
+        android:ems="10"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/saisie"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:background="@drawable/drop2"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pointeur"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginTop="-50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/cursor" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/pixel" />
+
+
+
+    <TextView
+        android:id="@+id/btn_retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/saisie"
+        android:layout_toRightOf="@+id/saisie"
+        android:text="Retour"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btn_clavier"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/right_click"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="#000"
+        android:src="@drawable/clavier" />
+
+    <ImageButton
+        android:id="@+id/right_click"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btn_clavier"
+        android:layout_toStartOf="@+id/btn_clavier"
+        android:background="#000"
+        android:src="@drawable/right_click" />
+
+    <ImageButton
+        android:id="@+id/left_click"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/right_click"
+        android:layout_toStartOf="@+id/right_click"
+        android:background="#000"
+        android:src="@drawable/left_click" />
+
+</RelativeLayout>
